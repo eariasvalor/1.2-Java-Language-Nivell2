@@ -18,16 +18,16 @@ Fins que l’usuari/ària no introdueixi un `float` ben format, ha de seguir dem
 
 Tots els mètodes reben un `String` amb el missatge que es vol mostrar a l’usuari/ària (ex: *“Introdueix la teva edat”*) i retornen la dada introduïda pel teclat.
 
----
 
 **Mètodes a implementar**
 
-->Capturant l’excepció de la classe **`InputMismatchException`**:
+-> Capturant l’excepció de la classe `InputMismatchException`:
 public static byte llegirByte(String missatge);
 public static int llegirInt(String missatge);
 public static float llegirFloat(String missatge);
 public static double llegirDouble(String missatge);
----
+
+
 ->Capturant una excepció personalitzada de la classe Exception:
 public static char llegirChar(String missatge);
 public static String llegirString(String missatge);
