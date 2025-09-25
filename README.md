@@ -22,10 +22,10 @@ Tots els mètodes reben un `String` amb el missatge que es vol mostrar a l’usu
 **Mètodes a implementar**
 
 -> Capturant l’excepció de la classe `InputMismatchException`:
-public static byte llegirByte(String missatge);
-public static int llegirInt(String missatge);
-public static float llegirFloat(String missatge);
-public static double llegirDouble(String missatge);
+public static byte llegirByte(String missatge);\n
+public static int llegirInt(String missatge);\n
+public static float llegirFloat(String missatge);\n
+public static double llegirDouble(String missatge);\n
 
 
 ->Capturant una excepció personalitzada de la classe Exception:
