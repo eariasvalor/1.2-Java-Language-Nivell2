@@ -142,7 +142,7 @@ public class Input {
             input = scanner.nextLine().trim();
 
             try {
-                if ((input.equalsIgnoreCase("s")) || (input.equalsIgnoreCase("n"))) {
+                if ((input.equalsIgnoreCase("y")) || (input.equalsIgnoreCase("n"))) {
                     answer = input.charAt(0);
                     if (answer == 'y') {
                         value = true;
