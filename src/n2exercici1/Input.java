@@ -8,13 +8,12 @@ public class Input {
 
     public static byte readByte(String message) {
         byte value = 0;
-        boolean correct = false;
 
-        while (!correct) {
+        while (true) {
             try {
                 System.out.println(message);
                 value = scanner.nextByte();
-                correct = true;
+                break;
             } catch (InputMismatchException e) {
                 System.out.println("Format error.");
             } finally {
@@ -26,13 +25,12 @@ public class Input {
 
     public static int readInt(String message) {
         int value = 0;
-        boolean correct = false;
 
-        while (!correct) {
+        while (true) {
             try {
                 System.out.println(message);
                 value = scanner.nextInt();
-                correct = true;
+                break;
             } catch (InputMismatchException e) {
                 System.out.println("Format error");
                 scanner.nextLine();
@@ -46,13 +44,12 @@ public class Input {
 
     public static float readFloat(String message) {
         float value = 0.0F;
-        boolean correct = false;
 
-        while (!correct) {
+        while (true) {
             try {
                 System.out.println(message);
                 value = scanner.nextFloat();
-                correct = true;
+                break;
             } catch (InputMismatchException e) {
                 System.out.println("Format error");
                 scanner.nextLine();
@@ -64,13 +61,12 @@ public class Input {
 
     public static double readDouble(String message) {
         double value = 0.0;
-        boolean correct = false;
 
-        while (!correct) {
+        while (true) {
             try {
                 System.out.println(message);
                 value = scanner.nextDouble();
-                correct = true;
+                break;
             } catch (InputMismatchException e) {
                 System.out.println("Format error");
                 scanner.next();
@@ -85,9 +81,8 @@ public class Input {
     public static char readChar(String message) {
         char value = ' ';
         String input = "";
-        boolean correct = false;
 
-        while (!correct) {
+        while (true) {
             System.out.println(message);
             input = scanner.nextLine().trim();
 
@@ -96,7 +91,7 @@ public class Input {
                     throw new CustomException("You must enter one single character.");
                 }
                 value = input.charAt(0);
-                correct = true;
+                break;
             } catch (CustomException e) {
                 System.out.println(e.getMessage());
             }
@@ -109,9 +104,8 @@ public class Input {
     public static String readString(String message) {
         String value = "";
         String input = "";
-        boolean correct = false;
 
-        while (!correct) {
+        while (true) {
             System.out.println(message);
             input = scanner.nextLine();
 
@@ -121,7 +115,7 @@ public class Input {
 
                 }
                 value = input;
-                correct = true;
+                break;
             } catch (CustomException e) {
                 System.out.println(e.getMessage());
             }
@@ -133,11 +127,10 @@ public class Input {
 
     public static boolean readYesNo(String message) {
         boolean value = false;
-        boolean correct = false;
         String input = "";
         char answer = ' ';
 
-        while (!correct) {
+        while (true) {
             System.out.println(message);
             input = scanner.nextLine().trim();
 
@@ -149,7 +142,7 @@ public class Input {
                     } else if (answer == 'n') {
                         value = false;
                     }
-                    correct = true;
+                    break;
                 } else {
                     throw new CustomException("You must enter only y or n.");
 
